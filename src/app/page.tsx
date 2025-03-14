@@ -1,7 +1,9 @@
+import { Intro } from "@/types/intro";
+
 const HomePage = async () => {
   const res = await fetch("http://localhost:4000/intro");
   const data = await res.json();
-  const introData: Intro[] = data;
+  const introData: Intro = data;
   return (
     <div className="home-container">
       <div className="intro-section">
