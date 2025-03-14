@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 import TodoItem from "./TodoItem";
+import { todos } from "@/types/todos";
 
 export default function TodoList() {
   const {
@@ -37,7 +38,7 @@ export default function TodoList() {
   return (
     <>
       <ul style={{ listStyle: "none", width: 250 }}>
-        {todos.map((todo) => {
+        {todos.map((todo: todos) => {
           return <TodoItem key={todo.id} todo={todo} />;
         })}
       </ul>
